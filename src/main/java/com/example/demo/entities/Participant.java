@@ -17,7 +17,7 @@ public class Participant {
     private String type;
     private byte[] pdf;
 
-    // Constructeurs
+
 
     public Participant() {
     }
@@ -39,7 +39,7 @@ public class Participant {
         this.pdf = pdf;
     }
 
-    // Getters and Setters
+
 
     public Long getParticipantId() {
         return participantId;

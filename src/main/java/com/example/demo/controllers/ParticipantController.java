@@ -16,13 +16,7 @@ public class ParticipantController {
     private ParticipantService participantService;
 
     @PostMapping("/insertParticipant")
-    public ResponseEntity<String> postExample(
-            @RequestParam String nom,
-            @RequestParam String mail,
-            @RequestParam String fonction,
-            @RequestParam String type,
-            @RequestParam(required = false) MultipartFile pdf
-    ) {
+    public ResponseEntity<String> insertParticipant(@RequestParam String nom, @RequestParam String mail, @RequestParam String fonction, @RequestParam String type, @RequestParam(required = false) MultipartFile pdf) {
         try {
             byte[] pdfBytes = (pdf != null) ? pdf.getBytes() : null;
             participantService.insertParticipant(nom, mail, fonction, type, pdfBytes);
